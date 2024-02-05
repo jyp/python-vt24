@@ -12,24 +12,24 @@ def my_reversed(l):
         i = i-1
         yield l[i]
 
+print (range(1,3)[1])
+        
 def naturals_from(start):
     i = start
     while True:
         yield i
         i = i+1
 
-def is_prime(smaller_primes, candidate):
-    for n in smaller_primes:
-        if candidate % n == 0:
-            # candidate is divisible by n
-            return False
-    return True
 
 # generate all prime numbers
 def primes():
     primes_so_far = []
     for candidate in naturals_from(2):
-        if is_prime(primes_so_far,candidate):
+        for n in primes_so_far:
+            if candidate % n == 0:
+                # candidate is divisible by n
+                break
+        else:
             primes_so_far.append(candidate)
             yield candidate
 
@@ -40,10 +40,8 @@ def primes():
 # print(list(range(10,20)))
 # print(my_range(10,20))
 
-def main():
-     for x in primes():
-         if x > 100:
-             return
-         print (x)
+# for x in primes():
+#     if x > 100:
+#         continue
+#     print (x)
 
-main()
