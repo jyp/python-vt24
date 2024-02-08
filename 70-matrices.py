@@ -19,7 +19,7 @@ def zero_with_sharing(m,n):
 
 def zero_without_sharing(m,n):
     result = []
-    for i in range(0,m):
+    for _i in range(0,m):
         row = zero_vector(n)
         result.append(row)
     return result
@@ -44,7 +44,6 @@ def identity(n):
     for i in range(0,n):
         result[i][i] = 1 # modifying data is dangerous!
     return result
-
 
 # print(identity(10))
 
