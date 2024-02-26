@@ -1,4 +1,4 @@
-#+TITLE: Exam June 2022
+#+TITLE: Answers to June 2022 Exam
 #+options: toc:nil
 
 * Q1
